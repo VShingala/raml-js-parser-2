@@ -33,13 +33,7 @@ function packageScript(srcPath,dstPath,uglify) {
     mkdirp.sync(outputFolder);
     
     var contextDir = path.dirname(srcPath);
-    
-    var plugins = uglify ? [
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            compress: {}
-        })
-    ] : [];
+
     var config = {
         context: contextDir,
         entry: srcPath,
@@ -52,16 +46,13 @@ function packageScript(srcPath,dstPath,uglify) {
                 fs: path.resolve(__dirname, './modules/emptyFS.js')
             }
         },
-        externals: [
-            {
-                "xmlhttprequest": '{}'
-            }
-        ],
+        externals: [],
         plugins: plugins,
+        optimization: {
+            minimize: false //Update this to true or false
+        },
         module: {
-            loaders: [
-                { test: /\.json$/, loader: "json" }
-            ]
+            rules: []
         },
         node: {
             console: false,

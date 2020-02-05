@@ -95,11 +95,7 @@
     "ts-structure-parser": "0.0.19",
     "typescript": "3.3.3333",
     "typescript-compiler": "1.4.1-2",
-    "webpack": "^4.41.2"
-  },
-  "browser": {
-    "fs": false,
-    "xmlhttprequest": "./web-tools/modules/browserXMLHttpRequest.js",
-    "xhr2": "./web-tools/modules/browserXMLHttpRequest.js"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

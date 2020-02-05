@@ -261,7 +261,7 @@ gulp.task('package-build', gulp.series('coffee', function (done) {
         },
         {
           test: /\.json$/,
-          loader: 'json'
+          loader: 'json-loader'
         }
       ]
     },

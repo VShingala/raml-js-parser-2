@@ -107,8 +107,17 @@ function webPackForBrowser(parserRootFolder: string, rootFile : string, targetFi
         },
 
         module: {
-            loaders: [
-                { test: /\.json$/, loader: "json" }
+            rules: [
+                {
+                    test: /\.json$/,
+                    use: [
+                        {
+                            loader: 'file-loader',
+                            type: 'javascript/auto'
+                        },
+                        { loader: 'json-loader' }
+                    ]
+                }
             ]
         },
         externals: [
