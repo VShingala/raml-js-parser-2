@@ -79,7 +79,7 @@
     "@types/pluralize": "0.0.29",
     "@types/q": "1.5.2",
     "@types/underscore": "1.9.3",
-    "ajv": "6.10.2",
+    "ajv": "6.12.3",
     "atom-text-typer": "0.0.1",
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
